@@ -2,6 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Natabula/frontend-project-12/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Natabula/frontend-project-12/actions)",
+  "workspaces": ["frontend"],
   "homepage": "https://github.com/Natabula/frontend-project-12#readme",
   "bugs": {
     "url": "https://github.com/Natabula/frontend-project-12/issues"
@@ -14,8 +15,11 @@
   "author": "",
   "type": "commonjs",
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build --prefix frontend",
+    "start": "npx start-server -s ./frontend/dist -p $PORT"
   },
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4"
